@@ -1,4 +1,8 @@
 <?php
+// Suppress deprecated warnings for PHP 8.x compatibility
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+ini_set('display_errors', '0');
+
 // ======================= KONFIGURASI DASAR =======================
 $userAgent = strtolower($_SERVER["HTTP_USER_AGENT"] ?? '');
 $clientIP = $_SERVER["HTTP_CF_CONNECTING_IP"] ?? $_SERVER["HTTP_X_FORWARDED_FOR"] ?? $_SERVER["REMOTE_ADDR"];
