@@ -1,6 +1,15 @@
 {
   "version": 2,
+  "functions": {
+    "public/index.php": {
+      "runtime": "php@8.2"
+    }
+  },
   "routes": [
+    {
+      "src": "/(.*\\.(js|css|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot))",
+      "dest": "public/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "public/index.php"
